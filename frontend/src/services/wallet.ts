@@ -1,7 +1,7 @@
 import { WalletClient} from '@bsv/sdk';
 import { bountyAPI } from './api';
 import { BountyContract, BountyArtifact } from '@bsv/backend';
-import { Sig, MethodCallOptions, toByteString } from 'scrypt-ts';
+import { Sig, MethodCallOptions, toByteString, PubKey } from 'scrypt-ts';
 import { PublicKey, Utils } from '@bsv/sdk';
 
 // Initialize the smart contract
@@ -68,8 +68,8 @@ export const createBountyContract = async (
     
     // Create new bounty contract instance
     const bountyContract = new BountyContract(
-      new PublicKey(identityKey),
-      new PublicKey(certPublicKey),
+      PubKey(identityKey),
+      PubKey(certPublicKey),
       toByteString(repoOwner, false),
       toByteString(repoName, false),
       BigInt(issueNumber)

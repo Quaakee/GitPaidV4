@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const NodePolyfillPlugin = require('node-polyfill-webpack-plugin')
 const webpack = require('webpack');
 
 module.exports = {
@@ -17,6 +18,7 @@ module.exports = {
       favicon: './public/favicon.ico',
       inject: true,
     }),
+    new NodePolyfillPlugin(),
     // Don't use NodePolyfillPlugin - use explicit polyfills
     new CopyWebpackPlugin({
       patterns: [

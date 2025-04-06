@@ -50,6 +50,7 @@
         "date-fns": "^4.1.0",
         "dotenv": "^16.4.7",
         "html-webpack-plugin": "^5.6.3",
+        "node-polyfill-webpack-plugin": "^4.1.0",
         "pushdrop": "^0.1.7",
         "react": "^18.3.1",
         "react-dom": "^18.3.1",
@@ -65,7 +66,9 @@
         "webpack": "^5.97.1"
     },
     "devDependencies": {
-        "@babel/plugin-proposal-class-properties": "^7.18.6",
+        
+    "@babel/core": "^7.26.10",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
         "@babel/plugin-proposal-private-methods": "^7.18.6",
         "@babel/plugin-syntax-import-attributes": "^7.26.0",
         "@types/react": "^19.0.8",
@@ -76,11 +79,37 @@
         "node-stdlib-browser": "^1.3.1",
         "path-browserify": "^1.0.1",
         "process": "^0.11.10",
+        "scrypt-ts": "^1.4.3",
+        "scrypt-ts-lib": "^0.1.28",
         "stream-browserify": "^3.0.0",
         "util": "^0.12.5",
         "webpack-cli": "^6.0.1",
         "webpack-dev-server": "^5.2.0",
-        "scrypt-ts": "^1.4.3",
-        "scrypt-ts-lib": "^0.1.28"
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-react": "^7.17.12",
+    "@types/node": "^20.14.11",
+
+    "@types/react-router-dom": "^5.3.3",
+    "@types/react-toastify": "^4.1.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "babel-loader": "^8.2.5",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.10.0",
+    "eslint": "^8.57.0",
+    "eslint-config-standard-with-typescript": "^43.0.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "html-webpack-plugin": "^5.5.0",
+    "interpolate-html-plugin": "^4.0.0",
+    "node-polyfill-webpack-plugin": "^1.1.4",
+    "sass": "^1.72.0",
+    "sass-loader": "^14.1.1",
+    "standard": "^17.1.0",
+    "style-loader": "^3.3.4",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.5.4",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.74.0",
+    "webpack-merge": "^5.10.0"
     }
 }

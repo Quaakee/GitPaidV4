@@ -22,7 +22,7 @@
         }
       },
     "scripts": {
-        "build": "tsc",
+        "build": "tsc -b",
         "start": "node dist/server.js",
         "dev": "nodemon --exec ts-node --esm src/server.ts",
         "compile": "scrypt-cli c",
