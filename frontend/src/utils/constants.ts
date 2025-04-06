@@ -1,5 +1,5 @@
 import { WalletClient, LookupResolver, SHIPBroadcaster } from '@bsv/sdk';
-import { BountyContract, BountyArtifact } from '@bsv/backend';
+import { BountyContract, BountyArtifact } from '../utils/backend'; // THIS IS RIGHT I HTINK
 
 // Initialize smart contract
 BountyContract.loadArtifact(BountyArtifact);

@@ -1,7 +1,7 @@
 import { WalletClient} from '@bsv/sdk';
 import { bountyAPI } from './api';
-import { BountyContract, BountyArtifact } from '@bsv/backend';
-import { Sig, MethodCallOptions, toByteString } from 'scrypt-ts';
+import { BountyContract, BountyArtifact } from '../utils/backend';
+import { Sig, toByteString } from 'scrypt-ts';
 import { PublicKey, Utils } from '@bsv/sdk';
 
 // Initialize the smart contract

@@ -38,6 +38,10 @@ module.exports = {
       'process.env': JSON.stringify(process.env),
       'process.browser': JSON.stringify(true),
     }),
+    new webpack.NormalModuleReplacementPlugin(
+      /@bsv\/backend/,
+      path.resolve(__dirname, 'src/utils/backend.ts')
+    )
   ],
   module: {
     rules: [
@@ -70,7 +74,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.mjs', '.json'],
     fallback: {
       fs: false,
       path: require.resolve('path-browserify'),
@@ -80,6 +84,8 @@ module.exports = {
       zlib: require.resolve('browserify-zlib'),
       util: require.resolve('util/'),
       process: require.resolve('process/browser'),
+      os: require.resolve('os-browserify/browser'),
+      vm: require.resolve('vm-browserify'),
     },
     alias: {
       process: require.resolve('process/browser'),
@@ -87,6 +93,7 @@ module.exports = {
   },
   // Disable optimization to avoid ESM issues
   optimization: {
+    moduleIds: 'named', 
     concatenateModules: false
   }
 }
