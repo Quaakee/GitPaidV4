@@ -26,7 +26,8 @@
     "mod.ts"
   ],
   "include": [
-    "src"
+    "src",
+    "mod.ts"
   ],
   "exclude": [
     "dist",

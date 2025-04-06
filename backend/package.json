@@ -1,8 +1,10 @@
 {
-    "name": "bsv-bounty-backend",
+    "name": "@bsv/backend",
     "version": "1.0.0",
     "description": "Backend server for BSV Repository Bounties",
     "main": "dist/server.js",
+    "module": "dist/esm/mod.js",
+    "types": "dist/types/mod.d.ts",
     "type": "module",
     "files": [
         "dist",
