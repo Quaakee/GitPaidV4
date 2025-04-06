@@ -9,6 +9,16 @@
         "src",
         "mod.ts"
       ],
+      "exports": {
+        ".": {
+          "types": "./dist/types/mod.d.ts",
+          "import": "./dist/esm/mod.js"
+        },
+        "./*.ts": {
+          "types": "./dist/types/src/*.d.ts",
+          "import": "./dist/esm/src/*.js"
+        }
+      },
     "scripts": {
         "build": "tsc",
         "start": "node dist/server.js",
